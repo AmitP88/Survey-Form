@@ -13,27 +13,58 @@
         <h1 id="title">Survey Form</h1>
     </header>
     <main>
-        <p id="description">Details of what the survey is about</p>
+        <p id="description">Please provide feedback on my job interview &#x1F607;</p>
         <form action="submit" name="survey" id="survey-form">
+
             <label for="name" id="name-label">Name: </label>
-            <input type="text" name="name" id="name" placeholder="Enter your name" required>            
+            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+
             <label for="email" id="email-label">Email: </label>
             <input type="email" name="email" id="email" placeholder="Enter your email address" pattern=".+@+.com" title="Please provide a valid email address" required>
-            <label for="number" id="number-label">Number: </label>
-            <input type="number" name="number" id="number" min="0" max="100" placeholder="pick a number">
-            <select name="dropdown" id="dropdown">
-                <option value="option-1">Option 1</option>
-                <option value="option-2">Option 2</option>
+
+            <label for="number" id="number-label">How would you rate my interview? </label>
+            <input type="number" name="number" id="number" min="0" max="10" placeholder="rating">
+
+            <label for="role">Which option best describes your current role?</label>
+            <select name="role" id="dropdown">
+                <option value="CTO/CEO">CTO/CEO</option>
+                <option value="Manager">Manager</option>
+                <option value="Developer">Developer</option>
             </select>
-            <label for="1">1</label>
-            <input type="radio" name="number" id="1" value="1">
-            <label for="2">2</label>
-            <input type="radio" name="number" id="2" value="2">
-            <label for="A">A</label>
-            <input type="checkbox" name="letter" id="A" value="A">
-            <label for="B">B</label>
-            <input type="checkbox" name="letter" id="B" value="B">
-            <textarea></textarea>
+
+            <label for="interview">How likely is it that you would recommend me for a developer position?</label>
+            <label for="definitely">Definitely</label>
+            <input type="radio" name="recommendation" id="definitely" value="definitely">
+            <label for="maybe">Maybe</label>
+            <input type="radio" name="recommendation" id="maybe" value="maybe">
+            <label for="not-sure">Not sure</label>
+            <input type="radio" name="recommendation" id="not-sure" value="not-sure">
+            
+            <label for="skillset">What skills would you say that I need to improve? (Check all that apply)</label>
+            <label for="HTML5">HTML5</label>
+            <input type="checkbox" name="skill" id="HTML5" value="HTML5">
+            <label for="CSS3">CSS3</label>
+            <input type="checkbox" name="skill" id="CSS3" value="CSS3">
+            <label for="JavaScript">JavaScript</label>
+            <input type="checkbox" name="skill" id="JavaScript" value="JavaScript">
+            <label for="ES6">ES6</label>
+            <input type="checkbox" name="skill" id="ES6" value="ES6">
+            <label for="MongoDB">MongoDB</label>
+            <input type="checkbox" name="skill" id="MongoDB" value="MongoDB">
+            <label for="Express">Express</label>
+            <input type="checkbox" name="skill" id="Express" value="Express">
+            <label for="React">React</label>
+            <input type="checkbox" name="skill" id="React" value="React">
+            <label for="Redux">Redux</label>
+            <input type="checkbox" name="skill" id="Redux" value="Redux">
+            <label for="Node">Node</label>
+            <input type="checkbox" name="skill" id="Node" value="Node">
+            <label for="Responsive-Design">Responsive Design</label>
+            <input type="checkbox" name="skill" id="Responsive-Design" value="Responsive-Design">
+
+
+            <label for="comments">Any comments or suggestions?</label>
+            <textarea placeholder="Enter your comment here..."></textarea>
             <button type="submit" id="submit">Submit</button>
         </form>
     </main>
