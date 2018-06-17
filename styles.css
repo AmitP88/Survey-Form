@@ -8,8 +8,9 @@ header, #description {
 }
 
 main {
-    background-color: cadetblue;
+    background-color: whitesmoke;
     padding: 5%;
+    margin: 5%;
     border-radius: 5px;
 }
 
