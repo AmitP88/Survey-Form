@@ -1,7 +1,31 @@
 @media (min-width: 320px) {
+    #description {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
     .question {
         display: flex;
         flex-direction: column;
+        margin: 10%;
+    }
+
+    .item {
+        margin-top: 7%;
+        margin-bottom: 7%;
+    }
+
+    input, #dropdown, textarea {
+        padding: 2%;
+    }
+
+    label {
+        margin-bottom: 3%;
+    }
+
+    footer {
+        margin-top: 10%;
+        margin-bottom: 10%;
     }
 }
 
