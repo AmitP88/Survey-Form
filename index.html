@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./media_queries.css">
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/brands.js" integrity="sha384-qJKAzpOXfvmSjzbmsEtlYziSrpVjh5ROPNqb8UZ60myWy7rjTObnarseSKotmJIx" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/fontawesome.js" integrity="sha384-2IUdwouOFWauLdwTuAyHeMMRFfeyy4vqYNjodih+28v2ReC+8j+sLF9cK339k5hY" crossorigin="anonymous"></script>
     <title>Survey Form</title>
 </head>
 <body>
@@ -16,58 +19,118 @@
         <p id="description">Please provide feedback on my job interview &#x1F607;</p>
         <form action="submit" name="survey" id="survey-form">
 
-            <label for="name" id="name-label">Name: </label>
-            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+            <div class="question">
+                <label for="name" id="name-label">Name: </label>
+                <input type="text" name="name" id="name" placeholder="Enter your name" required>                
+            </div>
 
-            <label for="email" id="email-label">Email: </label>
-            <input type="email" name="email" id="email" placeholder="Enter your email address" pattern=".+@+.com" title="Please provide a valid email address" required>
+            <div class="question">
+                <label for="email" id="email-label">Email: </label>
+                <input type="email" name="email" id="email" placeholder="Enter your email address" pattern=".+@+.com" title="Please provide a valid email address" required>                
+            </div>
 
-            <label for="number" id="number-label">How would you rate my interview? </label>
-            <input type="number" name="number" id="number" min="0" max="10" placeholder="rating">
+            <div class="question">
+                <label for="number" id="number-label">How would you rate my interview? </label>
+                <input type="number" name="number" id="number" min="0" max="10" placeholder="rating">                
+            </div>
 
-            <label for="role">Which option best describes your current role?</label>
-            <select name="role" id="dropdown">
-                <option value="CTO/CEO">CTO/CEO</option>
-                <option value="Manager">Manager</option>
-                <option value="Developer">Developer</option>
-            </select>
+            <div class="question">
+                <label for="role">Which option best describes your current role?</label>
+                <select name="role" id="dropdown">
+                    <option value="CTO/CEO">CTO/CEO</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Developer">Developer</option>
+                </select>                
+            </div>
 
-            <label for="interview">How likely is it that you would recommend me for a developer position?</label>
-            <label for="definitely">Definitely</label>
-            <input type="radio" name="recommendation" id="definitely" value="definitely">
-            <label for="maybe">Maybe</label>
-            <input type="radio" name="recommendation" id="maybe" value="maybe">
-            <label for="not-sure">Not sure</label>
-            <input type="radio" name="recommendation" id="not-sure" value="not-sure">
-            
-            <label for="skillset">What skills would you say that I need to improve? (Check all that apply)</label>
-            <label for="HTML5">HTML5</label>
-            <input type="checkbox" name="skill" id="HTML5" value="HTML5">
-            <label for="CSS3">CSS3</label>
-            <input type="checkbox" name="skill" id="CSS3" value="CSS3">
-            <label for="JavaScript">JavaScript</label>
-            <input type="checkbox" name="skill" id="JavaScript" value="JavaScript">
-            <label for="ES6">ES6</label>
-            <input type="checkbox" name="skill" id="ES6" value="ES6">
-            <label for="MongoDB">MongoDB</label>
-            <input type="checkbox" name="skill" id="MongoDB" value="MongoDB">
-            <label for="Express">Express</label>
-            <input type="checkbox" name="skill" id="Express" value="Express">
-            <label for="React">React</label>
-            <input type="checkbox" name="skill" id="React" value="React">
-            <label for="Redux">Redux</label>
-            <input type="checkbox" name="skill" id="Redux" value="Redux">
-            <label for="Node">Node</label>
-            <input type="checkbox" name="skill" id="Node" value="Node">
-            <label for="Responsive-Design">Responsive Design</label>
-            <input type="checkbox" name="skill" id="Responsive-Design" value="Responsive-Design">
+            <div class="question">
+                <label for="interview">How likely is it that you would recommend me for a developer position?</label>
+                <div class="buttons">
+                    <div class="item">
+                        <input type="radio" name="recommendation" id="definitely" value="definitely">
+                        <label for="definitely">Definitely</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="recommendation" id="maybe" value="maybe">
+                        <label for="maybe">Maybe</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="recommendation" id="not-sure" value="not-sure">
+                        <label for="not-sure">Not sure</label>
+                    </div>                     
+                </div>
+            </div>
+           
+            <div class="question">
+                <label for="skillset">What skills would you say that I need to improve? (Check all that apply)</label>
+                <div class="buttons">
+                    <div class="item">
+                        <input type="checkbox" name="skill" id="HTML5" value="HTML5">
+                        <label for="HTML5">HTML5</label>                  
+                    </div>
 
+                    <div class="item">
+                        <input type="checkbox" name="skill" id="CSS3" value="CSS3">
+                        <label for="CSS3">CSS3</label>
+                    </div>
 
-            <label for="comments">Any comments or suggestions?</label>
-            <textarea placeholder="Enter your comment here..."></textarea>
-            <button type="submit" id="submit">Submit</button>
+                    <div class="item">
+                        <input type="checkbox" name="skill" id="JavaScript" value="JavaScript">                   
+                        <label for="JavaScript">JavaScript</label>
+                    </div>
+
+                    <div class="item">
+                        <input type="checkbox" name="skill" id="ES6" value="ES6">                    
+                        <label for="ES6">ES6</label>
+                    </div>
+
+                    <div class="item">
+                        <input type="checkbox" name="skill" id="MongoDB" value="MongoDB">                    
+                        <label for="MongoDB">MongoDB</label>
+                    </div>
+
+                    <div class="item">
+                        <input type="checkbox" name="skill" id="Express" value="Express">
+                        <label for="Express">Express</label>
+                    </div>
+
+                    <div class="item">
+                        <input type="checkbox" name="skill" id="React" value="React">
+                        <label for="React">React</label>
+                    </div>
+
+                    <div class="item">
+                        <input type="checkbox" name="skill" id="Redux" value="Redux">
+                        <label for="Redux">Redux</label>
+                    </div>
+
+                    <div class="item">
+                        <input type="checkbox" name="skill" id="Node" value="Node">
+                        <label for="Node">Node</label>
+                    </div>
+
+                    <div class="item">
+                        <input type="checkbox" name="skill" id="Responsive-Design" value="Responsive-Design">
+                        <label for="Responsive-Design">Responsive Design</label>
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="comments">Any comments or suggestions?</label>
+                <textarea placeholder="Enter your comment here..."></textarea>
+               
+            </div>
+                <button type="submit" id="submit">Submit</button> 
         </form>
     </main>
-    <footer></footer>
+    <footer>
+        <div id="github">
+                <a href="https://github.com/AmitP88/Tribute-Page" target="_blank">
+                    <i class="fab fa-github fa-3x"></i>
+                </a>      
+                <p>Developed by <a href="https://github.com/AmitP88" target="_blank" class="github-profile-link">Amit Patel</a></p>  
+        </div>
+    </footer>
 </body>
 </html>
