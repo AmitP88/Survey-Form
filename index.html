@@ -18,7 +18,7 @@
     </header>
     <main>
         <p id="description">Please provide feedback on my job interview &#x1F607;</p>
-        <form action="submit" name="survey" id="survey-form">
+        <form id="survey-form" method="POST" action="https://crossorigin.me/https://freecodecamp.com">
 
             <div class="question">
                 <label for="name" id="name-label">Name: </label>
@@ -27,7 +27,7 @@
 
             <div class="question">
                 <label for="email" id="email-label">Email: </label>
-                <input type="email" name="email" id="email" placeholder="Enter your email address" pattern=".+@+.com" title="Please provide a valid email address" required>                
+                <input id="email" type="email" placeholder="your email" required>          
             </div>
 
             <div class="question">
